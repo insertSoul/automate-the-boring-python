@@ -16,6 +16,8 @@ def printBoard(board):
     print('-+-+-')
     print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
 
+print("To input in a space use top- mid- or low- followed by L M or R")
+print("E.g Top-L for top left or Mid-M for the center")
 turn = 'X'
 for i in range(9):
     printBoard(theBoard)
