@@ -20,7 +20,7 @@ validInputs = ["top-L" , "top-M" , "top-R" , "mid-L" , "mid-M" , "mid-R" , "low-
 turnCounter = 9
 
 print("To input in a space use top- mid- or low- followed by L M or R")
-print("E.g Top-L for top left or Mid-M for the center")
+print("E.g top-L for top left or Mid-M for the center")
 turn = 'X'
 while turnCounter > 0:
     printBoard(theBoard)
