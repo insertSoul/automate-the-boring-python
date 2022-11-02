@@ -16,16 +16,23 @@ def printBoard(board):
     print('-+-+-')
     print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
 
+validInputs = ["top-L" , "top-M" , "top-R" , "mid-L" , "mid-M" , "mid-R" , "low-L" , "low-M" , "low-R"]
+turnCounter = 9
+
 print("To input in a space use top- mid- or low- followed by L M or R")
 print("E.g Top-L for top left or Mid-M for the center")
 turn = 'X'
-for i in range(9):
+while turnCounter > 0:
     printBoard(theBoard)
     print('Turn for ' + turn + '. Move on which space?')
     move = input()
-    theBoard[move] = turn
-    if turn == 'X':
-        turn = 'O'
+    if move in validInputs:
+        turnCounter -= 1
+        theBoard[move] = turn
+        if turn == 'X':
+            turn = 'O'
+        else:
+            turn = 'X'
     else:
-        turn = 'X'
+        print("That is not a valid move, Please try again")
 printBoard(theBoard)
