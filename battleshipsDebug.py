@@ -30,6 +30,9 @@ win_state = False
 for i in range (6):
   guess_row = int(input("Guess Row: "))-1
   guess_col = int(input("Guess Col: "))-1
+  while guess_row < 0:
+    print("Values must be 1 to 5 Please try again")
+    guess_row = int(input("Guess Row: "))-1
   if guess_row == ship_row and guess_col == ship_col:
     print ("Congratulations! You sank my battleship!\n")
     board[guess_row][guess_col] = "*"
