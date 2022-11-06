@@ -2,7 +2,7 @@ from random import randint
 
 board = []
 
-for x in range(0, 5):
+for x in range(5):
   board.append(["O"] * 5)
 
 def print_board(board):
@@ -15,21 +15,21 @@ def random_row(board):
 def random_col(board):
   return randint(0, len(board[0]) - 1)
 
-ship_row = random_row(board)
+ship_row = random_row(board) 
 ship_col = random_col(board)
 
 # for testing purposes, print actual location
-print (ship_row)
-print (ship_col)
+print (ship_row + 1) 
+print (ship_col + 1)
 
-print ("\nYou have Six Guess to find the ship \n")
+print ("\nYou have Six Guess to find the ship\nUse numbers 1 to 5 for the rows and columns\n")
 print_board(board)
-
+print('\n')
 
 # Write your code below!
 for i in range (6):
-  guess_row = int(input("Guess Row: "))
-  guess_col = int(input("Guess Col: "))
+  guess_row = int(input("Guess Row: "))-1
+  guess_col = int(input("Guess Col: "))-1
   if guess_row == ship_row and guess_col == ship_col:
     print ("Congratulations! You sank my battleship!")
   elif guess_row not in range(5) and guess_col not in range(5):
