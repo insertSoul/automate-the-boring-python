@@ -1,4 +1,5 @@
-from collections import Counter
+#from collections import Counter   #Turns out to be unnecessary
+from itertools import repeat
 
 def displayInventory(inventory):
     print("Inventory:")
@@ -15,20 +16,23 @@ def addToInventory(inventory, addItems):
         inventory[i] += 1 # add the item to the inventory
     return(inventory)
 
-#inv = {'gold coin': 42, 'rope': 1}
-#print("Starting inventory is :\n")
-#displayInventory(inv)
+##### First Tests #######
 
-#dragonLoot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
-#inv = addToInventory(inv, dragonLoot)
-#print("\nFinal inventory is :\n")
-#displayInventory(inv)
+inv = {'gold coin': 42, 'rope': 1}
+print("Starting inventory is :\n")
+displayInventory(inv)
+
+dragonLoot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
+inv = addToInventory(inv, dragonLoot)
+print("\nFinal inventory is :\n")
+displayInventory(inv)
 
 
 #### MORE TESTING ##########
 inv2 = {'gold coin' : 12 , 'Axe' : 1 , 'helmet' : 2  , 'sword': 3 , 'magic frog' : 69}
 treasureChest = ['gold coin', 'gold coin', 'gold coin', 'gold coin', 'gold coin', 'cape of destruction']
-treasureChest2 = [('gold coin')*10, 'cape of destruction']
+treasureChest2 = ['gold coin', 'cape of destruction']
+treasureChest2.extend(repeat('gold coin', 99)) # Use to Add large amounts of an item
 
 
 inv2 = addToInventory(inv2, treasureChest2)
