@@ -15,20 +15,21 @@ def addToInventory(inventory, addItems):
         inventory[i] += 1 # add the item to the inventory
     return(inventory)
 
-inv = {'gold coin': 42, 'rope': 1}
-print("Starting inventory is :\n")
-displayInventory(inv)
+#inv = {'gold coin': 42, 'rope': 1}
+#print("Starting inventory is :\n")
+#displayInventory(inv)
 
-dragonLoot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
-inv = addToInventory(inv, dragonLoot)
-print("\nFinal inventory is :\n")
-displayInventory(inv)
+#dragonLoot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
+#inv = addToInventory(inv, dragonLoot)
+#print("\nFinal inventory is :\n")
+#displayInventory(inv)
+
 
 #### MORE TESTING ##########
+inv2 = {'gold coin' : 12 , 'Axe' : 1 , 'helmet' : 2  , 'sword': 3 , 'magic frog' : 69}
+treasureChest = ['gold coin', 'gold coin', 'gold coin', 'gold coin', 'gold coin', 'cape of destruction']
+treasureChest2 = [('gold coin')*10, 'cape of destruction']
 
-#inv2 = {'gold coin' : 12 , 'Axe' : 1 , 'helmet' : 2  , 'sword': 3 , 'magic frog' : 69}
-#treasureChest = {'gold coin' , 'gold coin' ,'gold coin' ,'gold coin' ,'gold coin' ,'cape of destruction'}
-#treasureChest2 = {  (('gold coin') )*10 ,'cape of destruction'}
 
-#inv2 = addToInventory(inv2, treasureChest2)
-#displayInventory(inv2)
+inv2 = addToInventory(inv2, treasureChest2)
+displayInventory(inv2)
